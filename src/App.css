@@ -1,0 +1,133 @@
+/* 전체 레이아웃 가운데 정렬 및 배경색 */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+  font-family: 'Segoe UI', 'Pretendard', Arial, sans-serif;
+  color: #204214;
+}
+
+/* 검색 영역 스타일 */
+.weather-search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.weather-input {
+  padding: 12px 18px;
+  border: 1.5px solid #88c057;
+  border-radius: 24px;
+  font-size: 18px;
+  outline: none;
+  transition: border 0.2s, background 0.3s;
+  background: #e6f4d9;
+  color: #2e4a1f;
+  box-shadow: 0 1px 4px rgba(136,192,87,0.3);
+}
+.weather-input:focus {
+  border: 1.5px solid #3c6e21;
+  background: #d0e8a1;
+}
+
+/* 버튼 스타일 */
+.weather-btn {
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #4caf50 60%, #81c784 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(76,175,80,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s;
+}
+.weather-btn:hover {
+  background: linear-gradient(90deg, #388e3c 60%, #66bb6a 100%);
+  box-shadow: 0 6px 18px rgba(56,142,60,0.8);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* 날씨 카드 스타일 */
+.weather-info {
+  min-width: 320px;
+  max-width: 90vw;
+  background: #f0f9eb;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(76,175,80,0.15), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 36px 32px 28px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  color: #2e4a1f;
+}
+.weather-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  color: #388e3c;
+  letter-spacing: 1px;
+}
+.weather-info p {
+  margin: 6px 0;
+  font-size: 1.2rem;
+  color: #4a6d29;
+}
+
+/* 안내 메시지 스타일 */
+.weather-info > p:first-child {
+  color: #7ba15e;
+  font-size: 1.1rem;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.weather-error {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+
+
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-info {
+  /* 기존 스타일 유지 */
+  min-width: 320px;
+  max-width: 90vw;
+  background: #f0f9eb;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(76,175,80,0.15), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 36px 32px 28px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  color: #2e4a1f;
+
+  /* 새로 추가 */
+  animation: fadeSlideUp 0.6s ease f
+}
